@@ -39,6 +39,21 @@ for k = 3:length(t)
 end
 
 figure(1);
-plot(t((length(t)/2):end)*T, yr((length(t)/2):end), 'r*');
+plot(t((length(t)/2):end)*T, yr((length(t)/2):end), 'r*', 'LineWidth', 1.5);
+xlabel('Tempo (s)');
+ylabel('Amplitude');
+title('Resposta ao degrau (Eq. Recursiva)');
+xlim([t(length(t)/2)*T, t(end)*T]); % ajusta o eixo x
+grid on;
+
 figure(2);
-plot(t((length(t)/2):end)*T, u((length(t)/2):end), 'r*');
+plot(t((length(t)/2):end)*T, u((length(t)/2):end), 'r*', 'LineWidth', 1.5);
+xlabel('Tempo (s)');
+ylabel('Amplitude');
+title('Ação de Controle (Eq. Recursiva)');
+xlim([t(length(t)/2)*T, t(end)*T]); % mostra só a segunda metade
+grid on;
+% figure(1);
+% plot(t((length(t)/2):end)*T, yr((length(t)/2):end), 'r*');
+% figure(2);
+% plot(t((length(t)/2):end)*T, u((length(t)/2):end), 'r*');

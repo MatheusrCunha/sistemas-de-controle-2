@@ -7,9 +7,10 @@ num = 19316.8821;
 den = [1 122.8849 19316.8821];
 
 Gs = tf(num, den);
+opt = stepDataOptions('InputOffset',1,'StepAmplitude',.5);
 %Gz = c2d(Gs);
 % ***** Digite o seguinte comando de resposta ao degrau *****
-step(Gs)
+step(Gs, opt)
 % ***** Digite os comandos para inserir a grade e o título do gráfico *****
 grid
 title (' Resposta ao Degrau Unitário de G(s) =')
@@ -35,6 +36,7 @@ Gz=c2d(Gs,Ta);
 disp('Gz:')
 zpk(Gz)
 zplane(z1)
+figure(2)
 
 [num,den]=tfdata(Gz,'v');
 G2z=minreal(tf([num(2) num(3)],[1 -1],Ta));
@@ -69,7 +71,8 @@ pole(FTMF)
 opt = stepDataOptions('InputOffset',1,'StepAmplitude',.5);
 
 figure(3)
-step(FTMF)
+step(FTMF, opt)
+S = stepinfo(FTMF);
  
  
  
