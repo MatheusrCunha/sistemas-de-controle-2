@@ -4,7 +4,7 @@
   <settings ppi="96">
     <identity>
       <id>26d3c01c-a59d-4267-bdb2-d7d85118302f</id>
-      <revision>70</revision>
+      <revision>71</revision>
     </identity>
     <calculation>
       <precision>4</precision>
@@ -243,7 +243,7 @@
       <math>
         <input>
           <e type="operand">T.s</e>
-          <e type="operand">4</e>
+          <e type="operand">3</e>
           <e type="operand">ζ</e>
           <e type="operand">ω.n</e>
           <e type="operator" args="2">*</e>
@@ -280,7 +280,7 @@
           <e type="operand">T.s</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.0651</e>
+          <e type="operand">0.0488</e>
         </result>
       </math>
     </region>

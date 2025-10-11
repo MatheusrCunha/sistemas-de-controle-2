@@ -14,6 +14,7 @@ step(Gs, opt)
 % ***** Digite os comandos para inserir a grade e o título do gráfico *****
 grid
 title (' Resposta ao Degrau Unitário de G(s) =')
+figure(1)
 
 %S = stepinfo(Gs); 
 
@@ -34,9 +35,9 @@ z1=exp(s1*Ta);
 
 Gz=c2d(Gs,Ta);
 disp('Gz:')
-zpk(Gz)
-zplane(z1)
-figure(2)
+% zpk(Gz)
+% zplane(z1)
+% figure(2)
 
 [num,den]=tfdata(Gz,'v');
 G2z=minreal(tf([num(2) num(3)],[1 -1],Ta));
@@ -70,7 +71,7 @@ pole(FTMF)
 % Degrau de 1 a 1.5
 opt = stepDataOptions('InputOffset',1,'StepAmplitude',.5);
 
-figure(3)
+figure(4)
 step(FTMF, opt)
 S = stepinfo(FTMF);
  
