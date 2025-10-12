@@ -53,7 +53,4 @@ ylabel('Amplitude');
 title('Ação de Controle (Eq. Recursiva)');
 xlim([t(length(t)/2)*T, t(end)*T]); % mostra só a segunda metade
 grid on;
-% figure(1);
-% plot(t((length(t)/2):end)*T, yr((length(t)/2):end), 'r*');
-% figure(2);
-% plot(t((length(t)/2):end)*T, u((length(t)/2):end), 'r*');
+
